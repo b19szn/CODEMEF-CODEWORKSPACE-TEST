@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shezan Mahmud — Full-Stack Developer & Creative Technologist. Building scalable web applications, elegant interfaces, and meaningful digital experiences.">
+  <meta name="theme-color" content="#0f172a">
+  <title>Shezan Mahmud | Full-Stack Developer</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans (display) + JetBrains Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons (inline SVG via script) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Shezan Mahmud - Home">
+        <span class="logo-mark"></span>
+        <span class="logo-text">SM</span>
+      </a>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#work" class="nav-link" data-section="work">Work</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i data-lucide="sun" class="icon-sun"></i>
+          <i data-lucide="moon" class="icon-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <i data-lucide="menu" class="icon-menu"></i>
+          <i data-lucide="x" class="icon-close"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- Hero Section -->
+    <section id="home" class="section hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="hero-greeting" aria-hidden="true">
+              <span class="wave" aria-hidden="true">👋</span>
+              Hello, I'm
+            </p>
+            <h1 id="hero-title" class="hero-name">
+              Shezan
+              <span class="highlight">Mahmud</span>
+            </h1>
+            <h2 class="hero-role" id="heroRole">Full-Stack Developer</h2>
+            <p class="hero-tagline">
+              Crafting scalable web applications, elegant interfaces, and meaningful digital experiences. 
+              Currently exploring the intersection of <strong>AI</strong> and <strong>developer tooling</strong>.
+            </p>
+            
+            <div class="hero-stats" role="list" aria-label="Key metrics">
+              <div class="stat" role="listitem">
+                <span class="stat-value" data-count="3">0</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat" role="listitem">
+                <span class="stat-value" data-count="47">0</span>
+                <span class="stat-label">Projects Delivered</span>
+              </div>
+              <div class="stat" role="listitem">
+                <span class="stat-value" data-count="12">0</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+            </div>
+            
+            <div class="hero-cta">
+              <a href="#work" class="btn btn-primary" aria-label="View my work">
+                <span>View Work</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#contact" class="btn btn-secondary" aria-label="Get in touch">
+                <span>Let's Talk</span>
+                <i data-lucide="mail" aria-hidden="true"></i>
+              </a>
+            </div>
+            
+            <div class="hero-social" role="list" aria-label="Social links">
+              <a href="https://github.com/shezanmahmud" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" role="listitem">
+                <i data-lucide="github" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com/in/shezanmahmud" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" role="listitem">
+                <i data-lucide="linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com/shezanmahmud" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter" role="listitem">
+                <i data-lucide="twitter" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:hello@shezanmahmud.dev" class="social-link" aria-label="Email" role="listitem">
+                <i data-lucide="mail" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-visual" aria-hidden="true">
+            <div class="code-window" id="codeWindow">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="control close"></span>
+                  <span class="control minimize"></span>
+                  <span class="control maximize"></span>
+                </div>
+                <div class="window-title">terminal.js</div>
+              </div>
+              <div class="window-body">
+                <pre class="code-preview" id="codePreview"><code></code></pre>
+              </div>
+            </div>
+            <div class="floating-cards">
+              <div class="float-card" style="--delay: 0s">
+                <i data-lucide="cpu" aria-hidden="true"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="float-card" style="--delay: 0.2s">
+                <i data-lucide="database" aria-hidden="true"></i>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="float-card" style="--delay: 0.4s">
+                <i data-lucide="layers" aria-hidden="true"></i>
+                <span>React</span>
+              </div>
+              <div class="float-card" style="--delay: 0.6s">
+                <i data-lucide="cloud" aria-hidden="true"></i>
+                <span>AWS</span>
+              </div>
+              <div class="float-card" style="--delay: 0.8s">
+                <i data-lucide="git-branch" aria-hidden="true"></i>
+                <span>TypeScript</span>
+              </div>
+              <div class="float-card" style="--delay: 1s">
+                <i data-lucide="zap" aria-hidden="true"></i>
+                <span>Next.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-scroll" aria-hidden="true">
+          <i data-lucide="mouse-pointer-2"></i>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 id="about-title" class="section-title">Building things that <span class="highlight">matter</span></h2>
+        </header>
+        
+        <div class="about-grid">
+          <div class="about-content">
+            <p class="about-lead">
+              I'm a full-stack developer based in Dhaka, Bangladesh, with a passion for building 
+              performant, accessible, and delightful web experiences.
+            </p>
+            <p>
+              My journey started with curiosity about how the web works — today, I architect 
+              end-to-end solutions using <strong>TypeScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, 
+              and cloud infrastructure. I care deeply about code quality, developer experience, 
+              and shipping products that users love.
+            </p>
+            
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i data-lucide="target" aria-hidden="true"></i>
+                <div>
+                  <h4>Product-Focused</h4>
+                  <p>Building features that solve real user problems, not just writing code.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="shield" aria-hidden="true"></i>
+                <div>
+                  <h4>Type-Safe by Default</h4>
+                  <p>TypeScript-first approach with rigorous testing and CI/CD pipelines.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="users" aria-hidden="true"></i>
+                <div>
+                  <h4>Collaborative</h4>
+                  <p>Experienced in agile teams, code reviews, and mentoring junior developers.</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem;">
+              <span>Work Together</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+          
+          <div class="about-visual">
+            <div class="experience-timeline" role="list" aria-label="Work experience">
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <time class="timeline-date">2023 — Present</time>
+                  <h3 class="timeline-role">Senior Full-Stack Engineer</h3>
+                  <p class="timeline-company">TechFlow Solutions</p>
+                  <p class="timeline-desc">Leading frontend architecture for a B2B SaaS platform serving 10k+ users. Migrated legacy codebase to Next.js 14 + tRPC.</p>
+                  <div class="timeline-tags">
+                    <span>Next.js</span><span>tRPC</span><span>PostgreSQL</span><span>AWS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <time class="timeline-date">2021 — 2023</time>
+                  <h3 class="timeline-role">Full-Stack Developer</h3>
+                  <p class="timeline-company">DigitalCraft Agency</p>
+                  <p class="timeline-desc">Delivered 15+ client projects across e-commerce, fintech, and health-tech. Established component library and design system.</p>
+                  <div class="timeline-tags">
+                    <span>React</span><span>Node.js</span><span>MongoDB</span><span>Docker</span>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <time class="timeline-date">2020 — 2021</time>
+                  <h3 class="timeline-role">Junior Developer</h3>
+                  <p class="timeline-company">StartupLab</p>
+                  <p class="timeline-desc">Built MVP for an EdTech platform. Implemented real-time features with WebSockets and optimized database queries.</p>
+                  <div class="timeline-tags">
+                    <span>Vue.js</span><span>Firebase</span><span>GraphQL</span><span>Tailwind</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work/Projects Section -->
+    <section id="work" class="section work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Selected Work</span>
+          <h2 id="work-title" class="section-title">Projects I'm <span class="highlight">proud of</span></h2>
+        </header>
+        
+        <div class="projects-grid" role="list" aria-label="Projects">
+          <!-- Project 1 -->
+          <article class="project-card featured" role="listitem">
+            <div class="project-visual">
+              <div class="project-preview">
+                <div class="preview-header">
+                  <span class="preview-dots"><span></span><span></span><span></span></span>
+                  <span class="preview-url">flowboard.app</span>
+                </div>
+                <div class="preview-content">
+                  <div class="preview-sidebar"></div>
+                  <div class="preview-main">
+                    <div class="preview-kanban">
+                      <div class="kanban-col"><div class="kanban-card"></div><div class="kanban-card"></div></div>
+                      <div class="kanban-col"><div class="kanban-card"></div></div>
+                      <div class="kanban-col"><div class="kanban-card"></div><div class="kanban-card"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-badge">Featured</div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-year">2024</span>
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live demo"><i data-lucide="external-link" aria-hidden="true"></i></a>
+                  <a href="#" class="project-link" aria-label="Source code"><i data-lucide="github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <h3 class="project-name">FlowBoard</h3>
+              <p class="project-desc">A real-time collaborative project management tool with Kanban boards, Gantt charts, and team analytics. Built with WebSocket synchronization.</p>
+              <div class="project-tech">
+                <span>Next.js 14</span>
+                <span>tRPC</span>
+                <span>Prisma</span>
+                <span>PostgreSQL</span>
+                <span>Tailwind</span>
+                <span>Socket.io</span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Project 2 -->
+          <article class="project-card" role="listitem">
+            <div class="project-visual">
+              <div class="project-preview">
+                <div class="preview-header">
+                  <span class="preview-dots"><span></span><span></span><span></span></span>
+                  <span class="preview-url">shopify-analytics.io</span>
+                </div>
+                <div class="preview-content">
+                  <div class="preview-charts">
+                    <div class="chart-bar" style="--height: 65%"></div>
+                    <div class="chart-bar" style="--height: 42%"></div>
+                    <div class="chart-bar" style="--height: 78%"></div>
+                    <div class="chart-bar" style="--height: 35%"></div>
+                    <div class="chart-bar" style="--height: 90%"></div>
+                    <div class="chart-bar" style="--height: 55%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-year">2023</span>
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live demo"><i data-lucide="external-link" aria-hidden="true"></i></a>
+                  <a href="#" class="project-link" aria-label="Source code"><i data-lucide="github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <h3 class="project-name">ShopIQ Analytics</h3>
+              <p class="project-desc">E-commerce analytics dashboard for Shopify merchants with revenue forecasting, cohort analysis, and automated insights.</p>
+              <div class="project-tech">
+                <span>Remix</span>
+                <span>Python</span>
+                <span>ClickHouse</span>
+                <span>Recharts</span>
+                <span>Redis</span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Project 3 -->
+          <article class="project-card" role="listitem">
+            <div class="project-visual">
+              <div class="project-preview">
+                <div class="preview-header">
+                  <span class="preview-dots"><span></span><span></span><span></span></span>
+                  <span class="preview-url">devsync.cli</span>
+                </div>
+                <div class="preview-content">
+                  <div class="preview-terminal">
+                    <div class="term-line">$ devsync deploy --env production</div>
+                    <div class="term-line success">✓ Build completed in 42s</div>
+                    <div class="term-line success">✓ Tests passing (247/247)</div>
+                    <div class="term-line success">✓ Deployed to https://app.devsync.io</div>
+                    <div class="term-line">$ _</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-year">2024</span>
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live demo"><i data-lucide="external-link" aria-hidden="true"></i></a>
+                  <a href="#" class="project-link" aria-label="Source code"><i data-lucide="github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <h3 class="project-name">DevSync CLI</h3>
+              <p class="project-desc">Open-source deployment automation tool with zero-config CI/CD, preview environments, and rollback capabilities. 2.3k+ stars on GitHub.</p>
+              <div class="project-tech">
+                <span>TypeScript</span>
+                <span>Commander.js</span>
+                <span>Docker</span>
+                <span>GitHub Actions</span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Project 4 -->
+          <article class="project-card" role="listitem">
+            <div class="project-visual">
+              <div class="project-preview">
+                <div class="preview-header">
+                  <span class="preview-dots"><span></span><span></span><span></span></span>
+                  <span class="preview-url">medportal.health</span>
+                </div>
+                <div class="preview-content">
+                  <div class="preview-dashboard">
+                    <div class="dash-stat"><span class="dash-value">1,247</span><span class="dash-label">Patients</span></div>
+                    <div class="dash-stat"><span class="dash-value">89%</span><span class="dash-label">Satisfaction</span></div>
+                    <div class="dash-stat"><span class="dash-value">2.3min</span><span class="dash-label">Avg Response</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-year">2022</span>
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live demo"><i data-lucide="external-link" aria-hidden="true"></i></a>
+                  <a href="#" class="project-link" aria-label="Source code"><i data-lucide="github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <h3 class="project-name">MedPortal</h3>
+              <p class="project-desc">HIPAA-compliant patient management system with appointment scheduling, telemedicine, and automated billing for multi-clinic networks.</p>
+              <div class="project-tech">
+                <span>Vue 3</span>
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+                <span>WebRTC</span>
+                <span>Kubernetes</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <div class="work-cta">
+          <p>Want to see more? Check out my <a href="https://github.com/shezanmahmud" target="_blank" rel="noopener noreferrer">GitHub</a> for open-source contributions and experiments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Tech Stack</span>
+          <h2 id="skills-title" class="section-title">Tools I <span class="highlight">work with</span></h2>
+        </header>
+        
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-category">
+            <div class="skill-header">
+              <i data-lucide="layout" aria-hidden="true"></i>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-tooltip="React 18 + Next.js 14">React / Next.js</span>
+              <span class="skill-tag" data-tooltip="TypeScript 5.x">TypeScript</span>
+              <span class="skill-tag" data-tooltip="Tailwind CSS + CSS Modules">Tailwind CSS</span>
+              <span class="skill-tag" data-tooltip="Zustand, TanStack Query">State Management</span>
+              <span class="skill-tag" data-tooltip="Framer Motion, CSS Animations">Motion</span>
+              <span class="skill-tag" data-tooltip="Vitest, Playwright, Testing Library">Testing</span>
+              <span class="skill-tag" data-tooltip="WCAG 2.1 AA, Semantic HTML">Accessibility</span>
+              <span class="skill-tag" data-tooltip="Vite, Turbopack, Webpack">Build Tools</span>
+            </div>
+          </div>
+          
+          <!-- Backend -->
+          <div class="skill-category">
+            <div class="skill-header">
+              <i data-lucide="server" aria-hidden="true"></i>
+              <h3>Backend</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-tooltip="Node.js 20 LTS">Node.js</span>
+              <span class="skill-tag" data-tooltip="tRPC, GraphQL, REST">API Design</span>
+              <span class="skill-tag" data-tooltip="Prisma, Drizzle ORM">ORM</span>
+              <span class="skill-tag" data-tooltip="PostgreSQL, MySQL">PostgreSQL</span>
+              <span class="skill-tag" data-tooltip="Redis, Upstash">Caching</span>
+              <span class="skill-tag" data-tooltip="JWT, NextAuth, OAuth2">Auth</span>
+              <span class="skill-tag" data-tooltip="BullMQ, Inngest">Job Queues</span>
+              <span class="skill-tag" data-tooltip="WebSockets, Server-Sent Events">Real-time</span>
+            </div>
+          </div>
+          
+          <!-- Infrastructure -->
+          <div class="skill-category">
+            <div class="skill-header">
+              <i data-lucide="cloud" aria-hidden="true"></i>
+              <h3>Infrastructure</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-tooltip="AWS (Vercel, Railway, Fly.io)">Cloud Deploy</span>
+              <span class="skill-tag" data-tooltip="Docker, Docker Compose">Containerization</span>
+              <span class="skill-tag" data-tooltip="GitHub Actions, GitLab CI">CI/CD</span>
+              <span class="skill-tag" data-tooltip="Nginx, Traefik">Reverse Proxy</span>
+              <span class="skill-tag" data-tooltip="Datadog, Sentry, Logtail">Observability</span>
+              <span class="skill-tag" data-tooltip="Terraform basics">IaC</span>
+              <span class="skill-tag" data-tooltip="Linux, Bash scripting">Server Admin</span>
+              <span class="skill-tag" data-tooltip="Cloudflare, AWS Route 53">DNS & CDN</span>
+            </div>
+          </div>
+          
+          <!-- Other -->
+          <div class="skill-category">
+            <div class="skill-header">
+              <i data-lucide="tool" aria-hidden="true"></i>
+              <h3>Other</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-tooltip="Git, GitHub, GitLab">Version Control</span>
+              <span class="skill-tag" data-tooltip="Figma, Design Systems">Design Tools</span>
+              <span class="skill-tag" data-tooltip="Notion, Linear, Jira">Project Mgmt</span>
+              <span class="skill-tag" data-tooltip="Postman, Hoppscotch">API Testing</span>
+              <span class="skill-tag" data-tooltip="ESLint, Prettier, Husky">Code Quality</span>
+              <span class="skill-tag" data-tooltip="Storybook, Chromatic">Component Docs</span>
+              <span class="skill-tag" data-tooltip="pnpm, npm workspaces">Monorepos</span>
+              <span class="skill-tag" data-tooltip="OpenAPI, Swagger">API Docs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 id="contact-title" class="section-title">Let's build something <span class="highlight">great together</span></h2>
+        </header>
+        
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-lead">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+            
+            <div class="contact-methods" role="list">
+              <a href="mailto:hello@shezanmahmud.dev" class="contact-method" role="listitem">
+                <div class="method-icon">
+                  <i data-lucide="mail" aria-hidden="true"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Email</span>
+                  <span class="method-value">hello@shezanmahmud.dev</span>
+                </div>
+              </a>
+              
+              <a href="https://calendly.com/shezanmahmud/30min" target="_blank" rel="noopener noreferrer" class="contact-method" role="listitem">
+                <div class="method-icon">
+                  <i data-lucide="calendar" aria-hidden="true"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Schedule a Call</span>
+                  <span class="method-value">30-min discovery call</span>
+                </div>
+              </a>
+              
+              <div class="contact-method" role="listitem">
+                <div class="method-icon">
+                  <i data-lucide="map-pin" aria-hidden="true"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Dhaka, Bangladesh (UTC+6)</span>
+                </div>
+              </div>
+              
+              <div class="contact-method" role="listitem">
+                <div class="method-icon">
+                  <i data-lucide="clock" aria-hidden="true"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Availability</span>
+                  <span class="method-value">Open to freelance & full-time</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-social" role="list" aria-label="Social links">
+              <a href="https://github.com/shezanmahmud" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="GitHub" role="listitem">
+                <i data-lucide="github" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/shezanmahmud" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="LinkedIn" role="listitem">
+                <i data-lucide="linkedin" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://twitter.com/shezanmahmud" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="Twitter" role="listitem">
+                <i data-lucide="twitter" aria-hidden="true"></i>
+                <span>Twitter</span>
+              </a>
+            </div>
+          </div>
+          
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="project">New Project</option>
+                <option value="freelance">Freelance Inquiry</option>
+                <option value="career">Career Opportunity</option>
+                <option value="collab">Collaboration</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" aria-hidden="true">
+                <i data-lucide="loader" class="spin"></i>
+                <span>Sending...</span>
+              </span>
+            </button>
+            <p class="form-note">By submitting, you agree to my <a href="#">Privacy Policy</a>. No spam, ever.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo" aria-label="Shezan Mahmud - Home">
+            <span class="logo-mark"></span>
+            <span class="logo-text">SM</span>
+          </a>
+          <p class="footer-tagline">Building the web, one commit at a time.</p>
+          <div class="footer-social" role="list" aria-label="Social links">
+            <a href="https://github.com/shezanmahmud" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub" role="listitem"><i data-lucide="github" aria-hidden="true"></i></a>
+            <a href="https://linkedin.com/in/shezanmahmud" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn" role="listitem"><i data-lucide="linkedin" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/shezanmahmud" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter" role="listitem"><i data-lucide="twitter" aria-hidden="true"></i></a>
+            <a href="mailto:hello@shezanmahmud.dev" class="footer-social-link" aria-label="Email" role="listitem"><i data-lucide="mail" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="https://github.com/shezanmahmud" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Open Source</a></li>
+              <li><a href="#">Speaking</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2024 Shezan Mahmud. Built with <i data-lucide="heart" aria-hidden="true" class="heart-icon"></i> and TypeScript.</p>
+        <p class="credit">Designed &amp; developed by Shezan Mahmud</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toastContainer" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
